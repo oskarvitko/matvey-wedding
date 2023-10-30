@@ -1,0 +1,26 @@
+.horizontal {
+    padding: 4em 0;
+
+    @media (max-width: $bp-sm) {
+        padding: 2em 0;
+    }
+
+    &__photo {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 .5em;
+
+        @media (max-width: $bp-sm) {
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 2em;
+
+            @media (max-width: $bp-sm) {
+                border-radius: 0;
+            }
+        }
+    }
+}

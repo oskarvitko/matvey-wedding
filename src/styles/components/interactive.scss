@@ -1,0 +1,72 @@
+.interactive {
+    padding: 3em 0;
+    font-size: .9em;
+
+    &__inner {
+        max-width: 420px;
+        padding: 0 1em;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-family: Montserrat, sans-serif;
+    }
+
+    &__text {
+        color: #000;
+        font-size: .8em;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 2.4px;
+    }
+
+    &__person {
+        margin-top: 3em;
+        display: flex;
+        font-size: 1em;
+        gap: 1em;
+        width: 100%;
+
+        transition: transform .2s ease, opacity .2s ease;
+
+        &-img {
+            width: 5em;
+
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        &-info {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            gap: .35em;
+            font-size: .8em;
+            align-items: flex-start;
+            justify-content: center;
+
+            h6 {
+                font-size: 1em;
+                font-weight: 700;
+            }
+
+            a {
+                font-size: .9m;
+                color: #000;
+                background-color: $color-primary;
+                text-decoration: none;
+                border-radius: 1em;
+                padding: .75em .9em;
+                white-space: nowrap;
+
+                &[href^=tel] {
+                    padding: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

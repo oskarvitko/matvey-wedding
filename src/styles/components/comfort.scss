@@ -1,0 +1,49 @@
+.comfort {
+    padding: 3em 0;
+
+    &__inner {
+        position: relative;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+
+        @media(min-width: $bp-sm) {
+            margin-left: 12.5em;
+        }
+
+        @media(max-width: 1000px) {
+            margin: 0 auto;
+        }
+
+        img {
+            width: 90%;
+            border-radius: 10px;
+        }
+
+        p {
+            transition: transform .3s ease;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            font-size: .75em;
+            font-weight: 300;
+            background-color: $color-primary;
+            font-family: Montserrat, sans-serif;
+            padding: 1.38em 3em;
+            color: #000;
+            border-radius: 10px;
+
+            opacity: .75;
+
+            @media(min-width: $bp-sm) {
+                margin-left: 12.5em;
+            }
+
+            @media(max-width: 1000px) {
+                margin-left: 0em;
+            }
+        }
+    }
+}

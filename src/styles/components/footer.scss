@@ -1,0 +1,29 @@
+.footer {
+    padding: 1em 0;
+    font-family: Montserrat, sans-serif;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 .5em;
+
+        @media(max-width: 800px) {
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        p {
+            font-size: .65em;
+            color: rgba($color-primary, .7);
+
+            b {
+                font-weight: 300;
+                font-family: 'Basdela', sans-serif;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.contact {
+    padding: 2em 0;
+    font-family: Montserrat, sans-serif;
+
+    &__inner {
+        max-width: $bp-sm;
+        padding: 0 .5em;
+        margin: 0 auto;
+
+        @media (min-width: $bp-sm) {
+            max-width: 700px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: .75em;
+        margin-bottom: 2em;
+
+        @media (min-width: $bp-sm) {
+            margin-bottom: 4em;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        @media(min-width: 900px) {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 1em;
+        justify-content: center;
+
+        @media(min-width: 900px) {
+            width: calc(50% - 1em);
+            font-size: .8em;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: .3em;
+        }
+
+        &-social {
+            display: flex;
+            align-items: center;
+            gap: .5em;
+
+            a {
+                display: block;
+                width: 1em;
+                height: 1em;
+            }
+
+            img {
+                width: 1em;
+                height: 1em;
+                cursor: pointer;
+
+                transition: opacity .3s ease;
+
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+
+        &>img {
+            width: 25%;
+            border-radius: 50%;
+        }
+
+        h6 {
+            font-weight: 700;
+            font-size: .9em;
+        }
+
+        a[href^=tel] {
+            text-decoration: none;
+            color: #000;
+            font-size: .75em;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.confirm {
+    font-family: Montserrat, sans-serif;
+    padding-bottom: 2em;
+
+    &__inner {
+        position: relative;
+        padding: 1em 1.75em;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .65em;
+        max-width: $bp-sm;
+
+        @media (min-width: $bp-sm) {
+            max-width: 400px;
+        }
+
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        font-family: 'Basdela', sans-serif;
+        font-size: 10em;
+        color: rgba($color-primary, .2);
+        line-height: 1;
+        display: flex;
+        flex-direction: column;
+        gap: .25em;
+        align-items: center;
+
+        @media (max-width: $bp-sm) {
+            font-size: 6em;
+            line-height: 1.75;
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        font-size: .6em;
+        text-align: center;
+        text-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #000;
+        text-transform: lowercase;
+    }
+
+    &__circle {
+        position: absolute;
+        right: 20%;
+        bottom: 17%;
+        z-index: 1;
+        font-size: .3em;
+        font-family: 'Basdela', sans-serif;
+        letter-spacing: 3px;
+        color: $color-primary;
+
+        animation: circle-rotate 12s linear infinite;
+        transform-origin: center;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        margin-top: .5em;
+        font-size: 1em;
+        width: 100%;
+
+        gap: 1em;
+
+        &>* {
+            width: 100%;
+        }
+
+        &[inert] {
+            opacity: .7;
+        }
+
+        input[type=text],
+        textarea {
+            width: 100%;
+            max-width: 100%;
+            font-family: Montserrat, sans-serif;
+            font-size: .75em;
+            border: 1px solid $color-primary;
+            border-radius: .25em;
+            padding: 0.5em 1em;
+            background-color: rgba(#fff, .4);
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 3px $color-primary;
+            }
+        }
+
+        textarea {
+            min-height: 5em;
+        }
+
+        &-radio {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            input[type=radio] {
+                display: none;
+
+                &+label {
+                    position: relative;
+                    font-size: .65em;
+                    font-weight: 500;
+                    padding-left: 2em;
+                    cursor: pointer;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        width: 1.5em;
+                        height: 1.5em;
+                        display: block;
+                        border: .125em solid darken($color-primary, 10%);
+                        border-radius: 5px;
+                    }
+
+                    &::before {
+                        content: "";
+                        opacity: 0;
+                        position: absolute;
+                        top: .375em;
+                        left: .375em;
+                        z-index: 2;
+                        width: .75em;
+                        height: .75em;
+                        display: block;
+                        background-color: $color-primary;
+                        transition: opacity .3s ease;
+                        transform: rotate(45deg);
+                        border-radius: 2px;
+                    }
+                }
+
+                &:checked+label::before {
+                    opacity: 1;
+                }
+            }
+        }
+
+        button {
+            background-color: $color-primary;
+            font-family: Montserrat, sans-serif;
+            font-size: .9em;
+            border: 1px solid $color-primary;
+            border-radius: .25em;
+            padding: 0.5em 1em;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($color-primary, 10%);
+            }
+        }
+    }
+}
+
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
