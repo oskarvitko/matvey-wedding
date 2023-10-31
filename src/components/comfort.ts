@@ -8,7 +8,7 @@ export const initComfort = () => {
         const getFactor = getFactorFunction(text, 300, -0.6)
         const handler = () => {
             const factor = 1 - getFactor()
-            text.style.transform = `translate(-50%, ${factor * 40 - 50}%)`
+            text.style.transform = `translate(-50%, ${factor * 40 - 20}%)`
         }
 
         scrollHandlers.push({

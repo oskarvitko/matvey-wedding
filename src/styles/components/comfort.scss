@@ -1,5 +1,6 @@
 .comfort {
     padding: 3em 0;
+    padding-top: 5em;
 
     &__inner {
         position: relative;
@@ -27,11 +28,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
-            font-size: .75em;
-            font-weight: 300;
+            font-size: .55em;
+            font-weight: 400;
             background-color: $color-primary;
             font-family: Montserrat, sans-serif;
-            padding: 1.38em 3em;
+            padding: 1.38em;
             color: #000;
             border-radius: 10px;
 
@@ -39,6 +40,7 @@
 
             @media(min-width: $bp-sm) {
                 margin-left: 12.5em;
+                padding: 1.38em 3em;
             }
 
             @media(max-width: 1000px) {

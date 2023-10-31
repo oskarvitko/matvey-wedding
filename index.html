@@ -34,9 +34,9 @@
         <span>FAM</span>
       </div>
       <div class="hello__text">
-        <p>Привет!<br>
-          Мы приглашаем тебя<br>на самое важное событие<br>в нашей жизни - день<br>нашей свадьбы!</p>
-        <p>Мы будем очень рады<br>разделить этот<br>день с тобой!</p>
+        <p><span data-hello-dear></span>,<br>
+          Мы хотим разделить<br>с <span data-hello-you></span> нашу свадьбу -<br>долгожданный и
+          счастливый<br>день нашей жизни
       </div>
     </div>
   </section>
@@ -126,7 +126,7 @@
     </div>
   </section>
 
-  <section id="section-plan" class="plan">
+  <!-- <section id="section-plan" class="plan">
     <div class="container">
       <h2 class="plan__title">Plan of the day</h2>
       <div id="plan-content" class="plan__content">
@@ -180,16 +180,33 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="section-comfort" class="comfort">
     <div class="container">
       <div class="comfort__inner">
-        <p id="comfort-text">во время праздника мы мечтаем создать уютную атмосферу, наполненную любовью, чтобы каждый
-          чувствовал себя
-          комфортно и был безумно счастлив, вместе с нами)
-        </p>
+        <p id="comfort-text">Во время празднования мы хотим что бы вы чувствовали себя комфортно, без скованности.<br>Не
+          относитесь к этому как к официальному мероприятию, пускай это будет встреча близких друзей, поводом которой
+          станем мы)</p>
         <img src="./assets/images/comfort.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section id="section-dresscode" class="dresscode">
+    <div class="dresscode__inner">
+      <p class="dresscode__text">
+        Для своего образа ты можешь руководствоваться этой цветовой палитрой
+      </p>
+      <div class="dresscode__items">
+        <div class="dresscode__item" style="background-color: #a69a9a;"></div>
+        <div class="dresscode__item" style="background-color: #635346;"></div>
+        <div class="dresscode__item" style="background-color: #3b4c56;"></div>
+        <div class="dresscode__item" style="background-color: #101c28;"></div>
+        <div class="dresscode__item" style="background-color: #767153;"></div>
+        <div class="dresscode__item" style="background-color: #353f37;"></div>
+        <div class="dresscode__item" style="background-color: #3c353d;"></div>
+        <div class="dresscode__item" style="background-color: #161618;"></div>
       </div>
     </div>
   </section>
@@ -198,7 +215,7 @@
     <div class="interactive__inner">
       <p class="interactive__text">
         Мы будем очень рады твоему активному участию в этом дне. Поэтому ты заранее можешь написать нашему ведущему
-        Никите, о желании поздравить нас песней, фокусом, стендапом или еще чем нибудь)
+        Никите, о желании поздравить нас необычно: песней, выступлением, фокусом
       </p>
 
       <div id="interactive-person" class="interactive__person">
@@ -235,9 +252,9 @@
         <textarea name="comment" placeholder="Комментарий/Пожелания"></textarea>
         <div class="confirm__form-radio">
           <input checked required id="willBe-yes" type="radio" name="willBe" value="1">
-          <label for="willBe-yes">Буду(ем) присутствовать</label>
+          <label for="willBe-yes"><span></span> присутствовать</label>
           <input required id="willBe-no" type="radio" name="willBe" value="0">
-          <label for="willBe-no">Буду(ем) отсутствовать</label>
+          <label for="willBe-no"><span></span> отсутствовать</label>
         </div>
         <button type="submit">Отправить</button>
       </form>

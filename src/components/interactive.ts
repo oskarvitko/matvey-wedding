@@ -14,7 +14,7 @@ export const initInteractive = () => {
 
         const changeStylesThrottled = throttle(changeStyles, 100)
 
-        const getFactor = getFactorFunction(element, 500, 0)
+        const getFactor = getFactorFunction(element, 400, 0)
         const handler = () => {
             const factor = getFactor()
 

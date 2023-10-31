@@ -4,7 +4,7 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
 
 $BOT_TOKEN = '6891137193:AAEgXMdu4Kd7x91MyAqxKaZjqrcp8TDv7yY';
-$CHAT_IDS = ['668975944'];
+$CHAT_IDS = ['668975944', '432613891'];
 
 $apiURL = "https://api.telegram.org/bot" . $BOT_TOKEN . "/sendMessage";
 
